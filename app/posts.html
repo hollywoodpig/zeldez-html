@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог</title>
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+  <div class="modal" id="modal-feedback">
+    <div class="modal-overlay"></div>
+    <div class="modal-window">
+      <button class="modal-close">+</button>
+
+      <form class="form">
+        <input id="feedback-name" name="feedback-name" class="input" type="text" placeholder="Ваше имя" required>
+        <input id="feedback-tel" name="feedback-tel" class="input" type="tel" placeholder="Ваш номер телефона" required>
+        <div class="checkbox">
+          <input id="feedback-data-policy" name="feedback-data-policy" class="checkbox-item" type="checkbox" required>
+          <label for="feedback-data-policy" class="checkbox-label">
+            Я даю согласие на <a class="link" href="#">обработку персональных данных</a>
+          </label>
+        </div>
+        <button class="btn primary-200">Заказать звонок</button>
+      </form>
+    </div>
+  </div>
+
+  <a class="anchor" href="#">&#8593;</a>
+
+  <div class="navbar active">
+    <div class="container">
+      <div class="hamburger" data-hamburger>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+      </div>
+
+      <div data-hamburger-open>
+        <div class="row align-items-md-center flex-column flex-md-row">
+          <div class="col-auto">
+            <a class="logo" href="#"><img src="img/logo.png" alt=""></a>
+          </div>    
+          <div class="col-auto">
+            <nav class="nav">
+              <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Блог</a></li>
+                <li class="nav-item" data-modal-open-id="modal-feedback"><a class="nav-link" href="#">Консультация</a></li>
+              </ul>
+            </nav>
+          </div>
+    
+          <div class="col-auto">
+            <a class="tel" href="tel:79912991448"><strong>+7 (991) 299-14-48</strong></a>
+          </div>
+    
+          <div class="col-auto ms-md-auto">
+            <ul class="socials">
+              <li class="socials-item">
+                <a class="socials-link" target="_blank" href="#">
+                  <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5292 0.833333C19.6775 0.363333 19.5292 0.0216665 18.8729 0.0216665H16.6909C16.1404 0.0216665 15.8863 0.320833 15.7379 0.640833C15.7379 0.640833 14.6154 3.37417 13.0479 5.14625C12.5396 5.65875 12.3067 5.82958 12.0313 5.82958C11.8829 5.82958 11.6921 5.65875 11.6921 5.18917V0.81125C11.6921 0.25625 11.5229 0 11.0567 0H7.62501C7.28584 0 7.07418 0.25625 7.07418 0.5125C7.07418 1.04625 7.85793 1.17458 7.94251 2.66917V5.91667C7.94251 6.62125 7.81751 6.75 7.54001 6.75C6.79876 6.75 4.99834 3.99542 3.91834 0.856667C3.70834 0.235 3.495 0 2.94417 0H0.741251C0.105834 0 0 0.29875 0 0.619167C0 1.19583 0.741251 4.09958 3.4525 7.94292C5.25292 10.5679 7.81584 11.9788 10.1246 11.9788C11.5229 11.9788 11.6921 11.6583 11.6921 11.1246V9.13875C11.6921 8.49833 11.8192 8.39167 12.2642 8.39167C12.5817 8.39167 13.1538 8.56208 14.4459 9.82208C15.9284 11.3167 16.1825 12 17.0088 12H19.1904C19.8259 12 20.1225 11.6796 19.9529 11.0604C19.7625 10.4413 19.0421 9.54458 18.11 8.47708C17.6017 7.87958 16.8392 7.2175 16.6063 6.89708C16.2888 6.47 16.3734 6.29917 16.6063 5.915C16.585 5.915 19.2542 2.11417 19.5292 0.831667" fill="currentColor"/>
+                  </svg>            
+                </a>
+              </li>
+              <li class="socials-item">
+                <a class="socials-link" target="_blank" href="#">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.1665 1.66652C15.2707 1.66982 16.3286 2.10989 17.1094 2.89064C17.8901 3.67138 18.3302 4.72935 18.3335 5.83348V14.1665C18.3302 15.2707 17.8901 16.3286 17.1094 17.1094C16.3286 17.8901 15.2707 18.3302 14.1665 18.3335H5.83348C4.72935 18.3302 3.67138 17.8901 2.89064 17.1094C2.10989 16.3286 1.66982 15.2707 1.66652 14.1665V5.83348C1.66982 4.72935 2.10989 3.67138 2.89064 2.89064C3.67138 2.10989 4.72935 1.66982 5.83348 1.66652H14.1665ZM14.1665 0H5.83348C2.625 0 0 2.625 0 5.83348V14.1665C0 17.375 2.625 20 5.83348 20H14.1665C17.375 20 20 17.375 20 14.1665V5.83348C20 2.625 17.375 0 14.1665 0Z" fill="currentColor"/>
+                    <path d="M15.4166 5.83347C15.1694 5.83347 14.9277 5.76016 14.7222 5.62281C14.5166 5.48546 14.3564 5.29024 14.2618 5.06183C14.1672 4.83342 14.1424 4.58209 14.1906 4.33961C14.2389 4.09713 14.3579 3.87441 14.5327 3.69959C14.7076 3.52477 14.9303 3.40572 15.1728 3.35749C15.4152 3.30926 15.6666 3.33401 15.895 3.42862C16.1234 3.52323 16.3186 3.68345 16.456 3.88901C16.5933 4.09457 16.6666 4.33625 16.6666 4.58347C16.667 4.74773 16.6349 4.91043 16.5722 5.06225C16.5095 5.21406 16.4174 5.352 16.3013 5.46814C16.1852 5.58429 16.0472 5.67635 15.8954 5.73904C15.7436 5.80174 15.5809 5.83383 15.4166 5.83347Z" fill="currentColor"/>
+                    <path d="M10 6.66652C10.6593 6.66652 11.3038 6.86202 11.852 7.22831C12.4002 7.5946 12.8274 8.11522 13.0797 8.72433C13.332 9.33345 13.3981 10.0037 13.2694 10.6503C13.1408 11.297 12.8233 11.8909 12.3571 12.3571C11.8909 12.8233 11.297 13.1408 10.6503 13.2694C10.0037 13.3981 9.33345 13.332 8.72433 13.0797C8.11522 12.8274 7.5946 12.4002 7.22831 11.852C6.86203 11.3038 6.66652 10.6593 6.66652 10C6.66747 9.1162 7.01897 8.26886 7.64392 7.64392C8.26886 7.01897 9.1162 6.66746 10 6.66652ZM10 5C9.0111 5 8.0444 5.29324 7.22215 5.84265C6.39991 6.39206 5.75904 7.17295 5.3806 8.08658C5.00217 9.00021 4.90315 10.0055 5.09608 10.9755C5.289 11.9454 5.76521 12.8363 6.46447 13.5355C7.16373 14.2348 8.05465 14.711 9.02455 14.9039C9.99446 15.0969 10.9998 14.9978 11.9134 14.6194C12.827 14.241 13.6079 13.6001 14.1574 12.7779C14.7068 11.9556 15 10.9889 15 10C15 8.67392 14.4732 7.40215 13.5355 6.46447C12.5979 5.52678 11.3261 5 10 5Z" fill="currentColor"/>
+                  </svg>                  
+                </a>
+              </li>
+              <li class="socials-item">
+                <a class="socials-link" target="_blank" href="#">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10.0604C20 4.50473 15.5223 0 10 0C4.47768 0 0 4.50473 0 10.0604C0 15.0816 3.65625 19.2437 8.4375 19.9991V12.9694H5.89777V10.0604H8.4375V7.84397C8.4375 5.32303 9.9308 3.9294 12.2147 3.9294C13.3089 3.9294 14.4536 4.12611 14.4536 4.12611V6.60214H13.192C11.9504 6.60214 11.5621 7.37733 11.5621 8.17408V10.0604H14.3353L13.8924 12.9694H11.5625V20C16.3438 19.245 20 15.083 20 10.0604Z" fill="currentColor"/>
+                  </svg>                  
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+    <div class="container">
+      <h1 class="section-title">Блог</h1>
+      <div class="row">
+        <div class="col-lg-8 order-1 order-lg-0">
+          <article class="article" style="background-image: url('img/posts/1.jpg');">
+            <h3 class="article-title" title="Как избавиться от муравьев?">Как избавиться от муравьев?</h3>
+            <small class="article-date">6 ноября 2020</small>
+            <small class="article-views">14 просмотров</small>
+            <a class="article-btn btn white" href="#">Читать</a>
+          </article>
+
+          <article class="article" style="background-image: url('img/posts/2.jpg');">
+            <h3 class="article-title" title="Как избавиться от клопов?">Как избавиться от клопов?</h3>
+            <small class="article-date">6 ноября 2020</small>
+            <small class="article-views">14 просмотров</small>
+            <a class="article-btn btn white" href="#">Читать</a>
+          </article>
+
+          <article class="article" style="background-image: url('img/posts/3.jpg');">
+            <h3 class="article-title" title="Как избавиться от тараканов?">Как избавиться от тараканов?</h3>
+            <small class="article-date">6 ноября 2020</small>
+            <small class="article-views">14 просмотров</small>
+            <a class="article-btn btn white" href="#">Читать</a>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <aside class="aside">
+            <article class="aside-item">
+              <h4 class="aside-title">Политика обработки персональных данных</h4>
+              <a class="aside-btn btn white" href="#">Читать</a>
+            </article>
+
+            <article class="aside-item">
+              <h4 class="aside-title">Прайс-лист для физических лиц</h4>
+              <a class="aside-btn btn white" href="#">Читать</a>
+            </article>
+
+            <article class="aside-item">
+              <h4 class="aside-title">Прайс-лист для юридических лиц</h4>
+              <a class="aside-btn btn white" href="#">Читать</a>
+            </article>
+
+            <article class="aside-item aside-deals">
+              <h3 class="aside-title">Акции</h3>
+              <p class="aside-text">
+                Закажи дезенсекцию сейчас и получи 20% скидки на наши услуги! Срок действия акции ограничен!
+              </p>
+              <p class="aside-text">
+                Закажи дезенсекцию не сейчас и получи 40% скидки на наши услуги! Срок действия акции неограничен!
+              </p>
+            </article>
+          </aside>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="pagination">
+          <button class="pagination-btn" disabled>&#8592; <span class="pagination-word">Назад</span></button>
+          <div class="pagination-items">
+            <a class="pagination-item active" href="#">1</a>
+            <a class="pagination-item" href="#">2</a>
+            <a class="pagination-item" href="#">3</a>
+          </div>
+          <button class="pagination-btn"><span class="pagination-word">Вперёд</span> &#8594;</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 order-1 order-md-0">
+          <a class="logo" href="#"><img src="img/logo.png" alt=""></a>
+          <nav class="footer-nav">
+            <ul class="footer-menu">
+              <li class="footer-item"><a href="#" class="footer-link">Главная</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Блог</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Консультация</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Прайс-лист для физических лиц</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Прайс-лист для юридических лиц</a></li>
+              <li class="footer-item"><a href="#" class="footer-link">Политика обработки персональных данных</a></li>
+            </ul>
+          </nav>
+          <div class="footer-copyright">
+            <p class="footer-copyright-text">©2021. Все права защищены.</p>
+            <p class="footer-copyright-text">Сделано студией Lifecode.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <ul class="socials">
+            <li class="socials-item">
+              <a class="socials-link" target="_blank" href="#">
+                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5292 0.833333C19.6775 0.363333 19.5292 0.0216665 18.8729 0.0216665H16.6909C16.1404 0.0216665 15.8863 0.320833 15.7379 0.640833C15.7379 0.640833 14.6154 3.37417 13.0479 5.14625C12.5396 5.65875 12.3067 5.82958 12.0313 5.82958C11.8829 5.82958 11.6921 5.65875 11.6921 5.18917V0.81125C11.6921 0.25625 11.5229 0 11.0567 0H7.62501C7.28584 0 7.07418 0.25625 7.07418 0.5125C7.07418 1.04625 7.85793 1.17458 7.94251 2.66917V5.91667C7.94251 6.62125 7.81751 6.75 7.54001 6.75C6.79876 6.75 4.99834 3.99542 3.91834 0.856667C3.70834 0.235 3.495 0 2.94417 0H0.741251C0.105834 0 0 0.29875 0 0.619167C0 1.19583 0.741251 4.09958 3.4525 7.94292C5.25292 10.5679 7.81584 11.9788 10.1246 11.9788C11.5229 11.9788 11.6921 11.6583 11.6921 11.1246V9.13875C11.6921 8.49833 11.8192 8.39167 12.2642 8.39167C12.5817 8.39167 13.1538 8.56208 14.4459 9.82208C15.9284 11.3167 16.1825 12 17.0088 12H19.1904C19.8259 12 20.1225 11.6796 19.9529 11.0604C19.7625 10.4413 19.0421 9.54458 18.11 8.47708C17.6017 7.87958 16.8392 7.2175 16.6063 6.89708C16.2888 6.47 16.3734 6.29917 16.6063 5.915C16.585 5.915 19.2542 2.11417 19.5292 0.831667" fill="currentColor"/>
+                </svg>            
+              </a>
+            </li>
+            <li class="socials-item">
+              <a class="socials-link" target="_blank" href="#">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.1665 1.66652C15.2707 1.66982 16.3286 2.10989 17.1094 2.89064C17.8901 3.67138 18.3302 4.72935 18.3335 5.83348V14.1665C18.3302 15.2707 17.8901 16.3286 17.1094 17.1094C16.3286 17.8901 15.2707 18.3302 14.1665 18.3335H5.83348C4.72935 18.3302 3.67138 17.8901 2.89064 17.1094C2.10989 16.3286 1.66982 15.2707 1.66652 14.1665V5.83348C1.66982 4.72935 2.10989 3.67138 2.89064 2.89064C3.67138 2.10989 4.72935 1.66982 5.83348 1.66652H14.1665ZM14.1665 0H5.83348C2.625 0 0 2.625 0 5.83348V14.1665C0 17.375 2.625 20 5.83348 20H14.1665C17.375 20 20 17.375 20 14.1665V5.83348C20 2.625 17.375 0 14.1665 0Z" fill="currentColor"/>
+                  <path d="M15.4166 5.83347C15.1694 5.83347 14.9277 5.76016 14.7222 5.62281C14.5166 5.48546 14.3564 5.29024 14.2618 5.06183C14.1672 4.83342 14.1424 4.58209 14.1906 4.33961C14.2389 4.09713 14.3579 3.87441 14.5327 3.69959C14.7076 3.52477 14.9303 3.40572 15.1728 3.35749C15.4152 3.30926 15.6666 3.33401 15.895 3.42862C16.1234 3.52323 16.3186 3.68345 16.456 3.88901C16.5933 4.09457 16.6666 4.33625 16.6666 4.58347C16.667 4.74773 16.6349 4.91043 16.5722 5.06225C16.5095 5.21406 16.4174 5.352 16.3013 5.46814C16.1852 5.58429 16.0472 5.67635 15.8954 5.73904C15.7436 5.80174 15.5809 5.83383 15.4166 5.83347Z" fill="currentColor"/>
+                  <path d="M10 6.66652C10.6593 6.66652 11.3038 6.86202 11.852 7.22831C12.4002 7.5946 12.8274 8.11522 13.0797 8.72433C13.332 9.33345 13.3981 10.0037 13.2694 10.6503C13.1408 11.297 12.8233 11.8909 12.3571 12.3571C11.8909 12.8233 11.297 13.1408 10.6503 13.2694C10.0037 13.3981 9.33345 13.332 8.72433 13.0797C8.11522 12.8274 7.5946 12.4002 7.22831 11.852C6.86203 11.3038 6.66652 10.6593 6.66652 10C6.66747 9.1162 7.01897 8.26886 7.64392 7.64392C8.26886 7.01897 9.1162 6.66746 10 6.66652ZM10 5C9.0111 5 8.0444 5.29324 7.22215 5.84265C6.39991 6.39206 5.75904 7.17295 5.3806 8.08658C5.00217 9.00021 4.90315 10.0055 5.09608 10.9755C5.289 11.9454 5.76521 12.8363 6.46447 13.5355C7.16373 14.2348 8.05465 14.711 9.02455 14.9039C9.99446 15.0969 10.9998 14.9978 11.9134 14.6194C12.827 14.241 13.6079 13.6001 14.1574 12.7779C14.7068 11.9556 15 10.9889 15 10C15 8.67392 14.4732 7.40215 13.5355 6.46447C12.5979 5.52678 11.3261 5 10 5Z" fill="currentColor"/>
+                </svg>                  
+              </a>
+            </li>
+            <li class="socials-item">
+              <a class="socials-link" target="_blank" href="#">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10.0604C20 4.50473 15.5223 0 10 0C4.47768 0 0 4.50473 0 10.0604C0 15.0816 3.65625 19.2437 8.4375 19.9991V12.9694H5.89777V10.0604H8.4375V7.84397C8.4375 5.32303 9.9308 3.9294 12.2147 3.9294C13.3089 3.9294 14.4536 4.12611 14.4536 4.12611V6.60214H13.192C11.9504 6.60214 11.5621 7.37733 11.5621 8.17408V10.0604H14.3353L13.8924 12.9694H11.5625V20C16.3438 19.245 20 15.083 20 10.0604Z" fill="currentColor"/>
+                </svg>                  
+              </a>
+            </li>
+          </ul>
+          <a class="tel" href="tel:79912991448">+7 (991) 299-14-48</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.min.js"></script>
+</body>
+</html>
