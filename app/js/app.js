@@ -156,17 +156,17 @@ if (anchor) {
 
     window.scrollTo(0, 0)
   })
+  
+  const height = document.documentElement
+  const body = document.body
+  
+  window.addEventListener('scroll', () => {
+    const percent = Math.round((height['scrollTop'] || body['scrollTop']) / ((height['scrollHeight'] || body['scrollHeight']) - height.clientHeight) * 100)
+  
+    if (percent > 30) {
+      anchor.classList.add('active')
+    } else {
+      anchor.classList.remove('active')
+    }
+  })
 }
-
-const height = document.documentElement
-const body = document.body
-
-window.addEventListener('scroll', () => {
-  const percent = Math.round((height['scrollTop'] || body['scrollTop']) / ((height['scrollHeight'] || body['scrollHeight']) - height.clientHeight) * 100)
-
-  if (percent > 30) {
-    anchor.classList.add('active')
-  } else {
-    anchor.classList.remove('active')
-  }
-})

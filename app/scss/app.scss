@@ -215,6 +215,9 @@
 
       background: #fff;
       overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
 
       .section-pricing-img {
         width: 100%;
@@ -224,15 +227,27 @@
     }
 
     &-content {
-      padding: $s-base * 6 $s-base * 5;
+      padding: $s-base * 6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+
+      @media (max-width: 1200px) {
+        padding: $s-base * 4 $s-base * 2;
+      }
+
+      .btn {
+        margin-top: auto;
+      }
 
       .section-pricing-title {
         display: block;
         text-align: center;
-        margin-bottom: $s-base * 28;
+        margin-bottom: $s-base * 20;
 
         @media (max-width: 1400px) {
-          margin-bottom: $s-base * 20;
+          margin-bottom: $s-base * 10;
         }
       }
     }
