@@ -14,6 +14,7 @@ const reviews = new Swiper('.reviews-slider', {
   slidesPerView: 1,
   breakpoints: {
     992: {
+      autoHeight: false,
       slidesPerView: 2
     }
   }

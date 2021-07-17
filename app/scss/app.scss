@@ -683,14 +683,14 @@
 .reviews-slider {
   @include bdrs;
   
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0 math.div($s-gutter, 2);
 
   .swiper-pagination {
     bottom: calc(93px - #{$s-base * 4});
 
     @media (max-width: 768px) {
-      bottom: calc(93px - #{$s-base * 12});
+      bottom: calc(93px - #{$s-base * 22});
     }
 
     &-bullet {
