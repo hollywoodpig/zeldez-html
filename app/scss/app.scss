@@ -303,8 +303,11 @@
         "img position"
         "text text"
       ;  
-      // align-content: start;
-      // height: 100%;
+
+      @media (min-width: 992px) {
+        align-content: start;
+        height: 100%;
+      }
 
       .section-reviews-name,
       .section-reviews-position {
@@ -685,6 +688,12 @@
   
   overflow-x: hidden;
   padding: 0 math.div($s-gutter, 2);
+
+  @media (min-width: 992px) {
+    .swiper-slide {
+      height: unset;
+    }
+  }
 
   .swiper-pagination {
     bottom: calc(93px - #{$s-base * 4});
