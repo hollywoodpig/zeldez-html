@@ -2,6 +2,7 @@
 
 const reviews = new Swiper('.reviews-slider', {
   loop: true,
+  autoHeight: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,

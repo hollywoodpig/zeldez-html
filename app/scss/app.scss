@@ -13,8 +13,8 @@
     text-align: center;
 
     @media (max-width: 768px) {
-      padding-top: $s-base * 20;
-      padding-bottom: $s-base * 20;
+      padding-top: $s-base * 10;
+      padding-bottom: $s-base * 10;
     }
   }
 
@@ -97,8 +97,8 @@
       height: 100%;
       counter-reset: step;
 
-      @media (max-width: 576px) {
-        padding: $s-base * 12 $s-base * 6;
+      @media (max-width: 768px) {
+        padding: $s-base * 8 $s-base * 6;
       }
     }
 
@@ -122,7 +122,7 @@
       @media (max-width: 576px) {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
-        gap: $s-base;
+        gap: $s-base * 2;
 
         .section-services-step {
           margin: 0 auto;
@@ -144,7 +144,7 @@
         margin-top: $s-gutter;
 
         @media (max-width: 576px) {
-          margin-top: $s-gutter * 3;
+          margin-top: $s-gutter * 2;
         }
       }
     }
@@ -208,6 +208,10 @@
 
     .button-group {
       margin-bottom: $s-base * 14;
+
+      @media (max-width: 768px) {
+        margin-bottom: $s-base * 10;
+      }
     }
 
     &-card {
@@ -294,13 +298,13 @@
       padding: $s-base * 5;
       display: grid;
       grid-template: auto auto / auto 1fr;
-      align-content: start;
       grid-template-areas:
         "img name"
         "img position"
         "text text"
-      ;
-      height: 100%;
+      ;  
+      // align-content: start;
+      // height: 100%;
 
       .section-reviews-name,
       .section-reviews-position {
@@ -678,12 +682,9 @@
 
 .reviews-slider {
   @include bdrs;
-
+  
   overflow: hidden;
-
-  .swiper-slide {
-    height: auto;
-  }
+  padding: 0 math.div($s-gutter, 2);
 
   .swiper-pagination {
     bottom: calc(93px - #{$s-base * 4});
@@ -900,10 +901,10 @@
   }
 
   .socials {
+    justify-content: flex-end;
     margin-bottom: $s-base * 4;
 
     @media (min-width: 768px) {
-      justify-content: flex-end;
       margin-bottom: 0;
     }
   }
@@ -916,7 +917,7 @@
     margin: $s-base * 9 0;
   }
 
-  &-link {
+  a {
     @include trs;
 
     text-decoration: underline;
@@ -1340,7 +1341,7 @@
   @include shadow;
 
   position: fixed;
-  right: 0;
+  left: 0;
   bottom: 0;
   display: block;
   min-width: $s-base * 14;
@@ -1355,10 +1356,10 @@
   color: #fff;
 
   &:not(.active) {
-    transform: translate(100%, #{$s-base * -8});
+    transform: translate(-100%, #{$s-base * -6});
   }
 
   &.active {
-    transform: translate(#{$s-base * -8}, #{$s-base * -8});
+    transform: translate(#{$s-base * 6}, #{$s-base * -6});
   }
 }
